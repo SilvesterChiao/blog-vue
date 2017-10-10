@@ -1,0 +1,35 @@
+.entry {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 1000px;
+
+  h3 {
+    margin-top: 20px;
+    margin-bottom: 36px;
+    height: 40px;
+    border-bottom: 2px solid #ccc;
+
+    span {
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      border-bottom: 2px solid #0f88eb;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  .control-group {
+    margin-bottom: 20px;
+    label {
+      display: inline-block;
+      float: left;
+      width: 160px;
+      text-align: right;
+    }
+
+    .controls {
+      margin-left: 180px;
+    }
+  }
+}
