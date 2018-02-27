@@ -70,26 +70,62 @@ module.exports = function () {
     // }
 
     var template = {
-        'user|10': [
-            {
-                'id|+1': 001,
-                'username': '@CNAME',
-                'password': '@WORD(6, 16)',
-                'email': '@EMAIL',
-                'regdate': '@DATE',
-                'word': '@CSENTENCE(5, 16)',
-                'constellation': '@CONSTELLATION',
-                'portrait': function(){
-                  return Random.image('200x200');
-                }
-            }
+        'users': function(){
+          var users = [{
+            'id': 0,
+            'username': 'Silvester',
+            'password': '123456',
+            'email': 'silvesterchiao@foxmail.com',
+            'regdate': '2015-09-04',
+            'word': '天上不知人间事，雨雪纷纷入悲秋',
+            'constellation': '巨蟹座',
+            'portrait': Random.image('200x200')
+          }];
+          for(var i = 0; i < 9; i ++){
+            users.push({
+              id: i + 1,
+              username: Random.cname(),
+              password: Random.word(6, 16),
+              email: Random.email(),
+              regdate: Random.date(),
+              word: Random.csentence(5, 16),
+              constellation: Random.constellation(),
+              portrait: Random.image('200x200')
+            })
+          }
+
+          return users;
+        },
+        'articles|10': [
+          {
+            'id|+1': 0,
+            'title': '@CPARAGRAPH',
+            'time': function(){
+              var t = Date.now();
+              return t;
+            },
+            'userId|0-9': 1,
+            'type': '@PICK(@/types)',
+            'visitedAmount': 0
+          }
         ],
-        'article|10': [
-            {
-                'id|+1': 001,
-                'title': '@CPARAGRAPH',
-                'author': '@PICK(@../../user)'
-            }
+        'comments|20': [
+          {
+            'id|+1': 0,
+            'time': function(){
+              var t = Date.now();
+              return t;
+            },
+            'text': '@CPARAGRAPH(1, 3)',
+            'userId|0-9': 1,
+            'articleId|0-9': 1
+          }
+        ],
+        'types': [
+          '前端',
+          '后端',
+          '产品',
+          '设计'
         ]
     }
 

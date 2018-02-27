@@ -8,15 +8,19 @@
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
-    "data": "json-server --watch src/mock/data.js --port 3000"
+    "data": "json-server --watch src/mock/data.js --port 9000"
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "element-ui": "^1.4.11",
+    "font-awesome": "^4.7.0",
+    "moment": "^2.19.1",
     "vue": "^2.3.3",
     "vue-router": "^2.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
+    "axios-mock-adapter": "^1.10.0",
     "babel-core": "^6.22.1",
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-runtime": "^6.22.0",

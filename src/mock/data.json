@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Lily"
+    },
+    {
+      "id": 2,
+      "name": "Tom"
+    }
+  ],
+  "posts": [
+    { "id": 1, "title": "post的第一个title", "author": "typicode", "userId": 1 },
+    { "id": 2, "title": "post的第二个title", "author": "tangcaiye", "userId": 2 }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment1111", "postId": 2 },
+    { "id": 2, "body": "some comment2222", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}

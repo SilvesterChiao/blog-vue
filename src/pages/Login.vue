@@ -1,51 +1,46 @@
 <template>
-  <div class="entry">
+  <div class="main">
     <h3>
       <span>{{ msg }}</span>
     </h3>
-    <form>
-      <div class="control-group">
-        <label for="username">
-          用户名
-        </label>
-        <div class="controls">
-          <input id="username" type="text" v-model="username">
-        </div>
-      </div>
-      <div class="control-group">
-        <label for="password">
-          密码
-        </label>
-        <div class="controls">
-          <input id="password" type="password" v-model="password">
-        </div>
-      </div>
-      <div class="control-group">
-        <div class="controls">
-          <button v-on:click.prevent="login">登陆</button>
-        </div>
-      </div>
-    </form>
+    <el-row :gutter="24">
+      <el-col :span="8" :offset="2">
+        <el-form ref="form" :model="form" label-width="80px">
+          <el-form-item label="用户名">
+            <el-input size="small" v-model="form.username"></el-input>
+          </el-form-item>
+          <el-form-item label="密码">
+            <el-input size="small" v-model="form.password"></el-input>
+          </el-form-item>
+          <el-form-item>
+            <el-button type="primary" @click="login">登录</el-button>
+          </el-form-item>
+        </el-form>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
+
 export default {
   name: 'login',
   data () {
     return {
       msg: '登陆页',
-      username: '',
-      password: ''
+      form: {
+        username: '',
+        password: ''
+      }
     }
   },
   methods: {
     login () {
-      axios.get('http://localhost:3000/user?username=' + this.username)
+      axios.get('http://localhost:9000/users?username=' + this.form.username)
         .then(function(response){
           console.log(response.data[0]);
-          if(response.data[0].password === this.password){
+          if(response.data[0].password === this.form.password){
             console.log("OK");
             var userInfo = {
               id: response.data[0].id,

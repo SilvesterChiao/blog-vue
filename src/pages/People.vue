@@ -1,5 +1,5 @@
 <template>
-<div class="people-box">
+<div class="main">
     <div class="people">
       <div class="user-info">
         <div class="banner">
@@ -29,7 +29,7 @@
         </div>
         <div class="article-info-content">
           <div class="article-list">
-            <div class="article-content" v-for="article in articles" :key="article.id">
+            <div class="article-content" v-for="article in userInfo.articles" :key="article.id">
               <router-link :to="'/article/' + article.id">{{ article.title }}</router-link>
             </div>
           </div>
@@ -47,13 +47,12 @@ export default {
   data(){
     return {
       msg: 'people',
-      userInfo: {},
-      articles: []
+      userInfo: {}
     }
   },
   methods: {
     getInfo(){
-      axios.get('http://localhost:3000/user?id=' + this.$route.params.id)
+      axios.get('http://localhost:9000/users?id=' + this.$route.params.id + '&_embed=articles')
         .then(function(response){
           this.userInfo = response.data[0];
         }.bind(this))
@@ -61,14 +60,6 @@ export default {
           console.log(error);
         });
 
-      axios.get('http://localhost:3000/article?author.id=' + this.$route.params.id)
-        .then(function(response){
-          this.articles = response.data;
-          console.log(this.articles);
-        }.bind(this))
-        .catch(function(error){
-          console.log(error);
-        });
     }
   },
   created(){
@@ -78,8 +69,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.people-box {
-  padding-top: 16px;
+.main {
+  width: 100%;
   background-color: #f3f3f3;
 
   .people {
@@ -178,6 +169,11 @@ export default {
             a {
               text-decoration: none;
               line-height: 1.75em;
+              color: #2b2c2d;
+
+              &:hover {
+                text-decoration-line: underline;
+              }
             }
           }
         }

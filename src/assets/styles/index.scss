@@ -5,7 +5,7 @@ $color: red;
 }
 
 body {
-  min-width: 1000px;
+  width: 100%;
 }
 
 header {
@@ -18,7 +18,7 @@ header {
   .header-inner {
     margin: 0 auto;
     padding: 0 16px;
-    width: 1000px;
+    width: 100%;
     height: 56px;
     box-sizing: border-box;
 
@@ -61,8 +61,28 @@ header {
   }
 }
 
+.main {
+  overflow: hidden;
+  margin: 0 auto;
+  // padding: 16px 20px 0;
+  // width: 100%;
+}
+
 footer {
   margin: 20px auto 0;
   padding: 0 16px;
-  width: 1000px;
+  // width: 100%;
+}
+
+button.primary {
+  margin-top: 16px;
+  padding: 0 16px;
+  line-height: 32px;
+  border: 0;
+  border-radius: 3px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  background-color: #0f88eb;
 }

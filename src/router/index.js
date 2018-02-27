@@ -1,11 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
-import Login from '@/components/Login'
-import Register from '@/components/Register'
-import People from '@/components/People'
-import Article from '@/components/Article'
-import AddArticle from '@/components/AddArticle'
+import Hello from '@/pages/Hello'
+import Login from '@/pages/Login'
+import Register from '@/pages/Register'
+import People from '@/pages/People'
+import Article from '@/pages/Article'
+import AddArticle from '@/pages/AddArticle'
+import Photos from '@/pages/Photos'
+import ArticleTypes from '@/pages/ArticleTypes'
+import Search from '@/pages/Search'
 
 Vue.use(Router)
 
@@ -37,9 +40,24 @@ export default new Router({
       component: Article
     },
     {
-      path: '/addArticle/',
+      path: '/addArticle',
       name: 'AddArticle',
       component: AddArticle
+    },
+    {
+      path: '/photos',
+      name: 'Photos',
+      component: Photos
+    },
+    {
+      path: '/articleTypes',
+      name: 'ArticleTypes',
+      component: ArticleTypes
+    },
+    {
+      path: '/search',
+      name: 'Search',
+      component: Search
     }
   ]
 })
