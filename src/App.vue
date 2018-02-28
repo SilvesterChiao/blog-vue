@@ -2,16 +2,15 @@
   <div class="app">
     <header>
       <div class="header-inner">
-        <nav>
+        <span class="header-title">首页</span>
+        <div class="header-tool">
+          工具
+          <i class="fa fa-camera-retro"></i>
+        </div>
+        <!-- <nav>
           <ul>
             <li>
               <router-link to="/" exact>首页</router-link>
-            </li>
-            <li>
-              <router-link to="/articleTypes">广场</router-link>
-            </li>
-            <li>
-              <router-link to="/photos">照片墙</router-link>
             </li>
             <li>
               <div class="search-box">
@@ -24,7 +23,7 @@
             <template v-if="message">
               <li class="entry">
                 <a href="#" @click="logout">退出</a>
-                <!-- <router-link to="/logout">退出</router-link> -->
+                <router-link to="/logout">退出</router-link>
               </li>
               <li class="entry">
                 <router-link to="/addArticle">发布</router-link>
@@ -38,11 +37,8 @@
                 <router-link to="/login">登陆</router-link>
               </li>
             </template>
-            <!-- <li v->
-
-            </li> -->
           </ul>
-        </nav>
+        </nav> -->
       </div>
     </header>
     <!-- <img src="./assets/logo.png"> -->
@@ -78,7 +74,7 @@ export default {
 <style lang="scss">
 @import 'assets/styles/index.scss';
 .app {
-  padding-bottom: 40px;
+  padding-bottom: 46px;
   min-width: 100%;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -86,8 +82,8 @@ export default {
   color: #2c3e50;
 }
 .search-box {
-  .el-input {
-    width: auto;
-  }
+  // .el-input {
+  //   width: auto;
+  // }
 }
 </style>

@@ -1,21 +1,6 @@
 <template>
   <div class="main">
     <div class="left">
-      <div class="banner">
-        <!-- 图片写法 -->
-        <!-- <img :src="logo" alt="banner"> -->
-
-        <el-carousel height="120px">
-          <el-carousel-item v-for="(banner, index) in banners" :key="index">
-            <img :src="banner" alt="banner">
-          </el-carousel-item>
-        </el-carousel>
-        <!-- <div class="banner-box">
-          <div class="banner-item">1</div>
-          <div class="banner-item">2</div>
-          <div class="banner-item">3</div>
-        </div> -->
-      </div>
       <div class="concent">
         <!-- <h3>{{ msg }}</h3> -->
         <transition-group name="article-list" tag="div" class="article-list">
@@ -42,14 +27,6 @@
           </div>
         </transition-group>
       </div>
-    </div>
-    <div class="right">
-      <!-- <el-button>按钮<i class="fa fa-camera-retro"></i> fa-camera-retro</el-button> -->
-      <todo-list></todo-list>
-      <!-- <h3>站内公告等内容</h3>
-      <div class="canvas">
-
-      </div> -->
     </div>
     <navbar></navbar>
   </div>
@@ -146,38 +123,8 @@ li {
     box-sizing: border-box;
     // width: 640px;
 
-    .banner {
-      // width: 640px;
-      height: 120px;
-      background-color: #ccc;
-      overflow: hidden;
-
-      .banner-box {
-        // width: 1920px;
-        height: 120px;
-      }
-
-      .banner-item {
-        float: left;
-        // width: 640px;
-        height: 120px;
-        line-height: 120px;
-        text-align: center;
-        transition: all 0.5s ease-in-out;
-      }
-    }
-
     .concent {
-      margin-top: 20px;
-    }
-  }
-  .right {
-    float: right;
-    padding: 0 20px;
-    width: 320px;
-
-    .canvas {
-      height: 200px;
+      // margin-top: 20px;
     }
   }
 }

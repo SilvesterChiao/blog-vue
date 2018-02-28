@@ -9,10 +9,13 @@ body {
 }
 
 header {
+  position: fixed;
+  width: 100%;
   height: 56px;
   border-bottom: 1px solid rgba(30,35,42,.06);
   box-shadow: 0 1px 3px 0 rgba(0,34,77,.05);
   background-clip: content-box;
+  background-color: #fff;
   color: $color;
 
   .header-inner {
@@ -21,6 +24,14 @@ header {
     width: 100%;
     height: 56px;
     box-sizing: border-box;
+
+    .header-title {
+      color: blue;
+    }
+
+    .header-tool {
+      float: right;
+    }
 
     nav{
       overflow: hidden;
@@ -64,6 +75,7 @@ header {
 .main {
   overflow: hidden;
   margin: 0 auto;
+  padding-top: 56px;
   // padding: 16px 20px 0;
   // width: 100%;
 }

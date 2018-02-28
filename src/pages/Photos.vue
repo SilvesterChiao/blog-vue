@@ -10,10 +10,12 @@
         <img :src="showedPhoto" alt="image">
       </div>
     </div>
+    <navbar></navbar>
   </div>
 </template>
 
 <script>
+import Navbar from '../components/Navbar';
 import picture1 from './../assets/images/picture1.jpg';
 import picture2 from './../assets/images/picture2.jpg';
 import picture3 from './../assets/images/picture3.jpg';
@@ -65,6 +67,9 @@ export default {
    hidePhoto: function(){
      this.show = false;
    }
+ },
+ components: {
+   Navbar
  }
 }
 </script>

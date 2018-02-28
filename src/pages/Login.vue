@@ -1,9 +1,34 @@
 <template>
   <div class="main">
-    <h3>
-      <span>{{ msg }}</span>
-    </h3>
-    <el-row :gutter="24">
+    <div class="title">
+      <h3>登陆</h3>
+    </div>
+    <div class="login-label">
+
+      <form action="#">
+        <div>
+          <label for="user-name">
+            <i class="fa fa-user"></i>
+          </label>
+          <input type="text" v-model="form.username">
+        </div>
+        <div>
+          <label for="password">
+            <i class="fa fa-lock"></i>
+          </label>
+          <input type="password" v-model="form.password">
+        </div>
+        <div>
+          <button @click="login">登陆</button>
+        </div>
+      </form>
+    </div>
+    <div>
+      <p>
+        <router-link to="/register">新用户注册</router-link>
+      </p>
+    </div>
+    <!-- <el-row :gutter="24">
       <el-col :span="8" :offset="2">
         <el-form ref="form" :model="form" label-width="80px">
           <el-form-item label="用户名">
@@ -17,7 +42,7 @@
           </el-form-item>
         </el-form>
       </el-col>
-    </el-row>
+    </el-row> -->
   </div>
 </template>
 

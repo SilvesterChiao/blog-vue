@@ -5,16 +5,16 @@ import axios from 'axios'
 import App from './App'
 import router from './router'
 import moment from 'moment'
-import ElementUI from 'element-ui'
+// import ElementUI from 'element-ui'
 // 1.0
-import 'element-ui/lib/theme-default/index.css'
+// import 'element-ui/lib/theme-default/index.css'
 // 2.0
 // import 'element-ui/lib/theme-chalk/index.css'
 import 'font-awesome/css/font-awesome.css'
 
 Vue.config.productionTip = false
 
-Vue.use(ElementUI)
+// Vue.use(ElementUI)
 Vue.prototype.$ajax = axios;
 
 // vue + elementui + vue-router + axios

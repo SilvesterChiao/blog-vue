@@ -9,6 +9,7 @@ import AddArticle from '@/pages/AddArticle'
 import Photos from '@/pages/Photos'
 import ArticleTypes from '@/pages/ArticleTypes'
 import Search from '@/pages/Search'
+import Mine from '@/pages/Mine'
 
 Vue.use(Router)
 
@@ -58,6 +59,11 @@ export default new Router({
       path: '/search',
       name: 'Search',
       component: Search
+    },
+    {
+      path: '/mine',
+      name: 'Mine',
+      component: Mine
     }
   ]
 })

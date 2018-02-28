@@ -1,16 +1,29 @@
 <template>
   <div class="navbar">
     <div class="navbar-nav">
-      关注
+      <router-link to="/" exact>
+        <i class="fa fa-home"></i>
+        首页
+      </router-link>
     </div>
     <div class="navbar-nav">
-      发现
+      <router-link to="/articleTypes">
+        <i class="fa fa-compass"></i>
+        发现
+      </router-link>
+    </div>
+
+    <div class="navbar-nav">
+      <router-link to="/photos">
+        <i class="fa fa-bell"></i>
+        消息
+      </router-link>
     </div>
     <div class="navbar-nav">
-      消息
-    </div>
-    <div class="navbar-nav">
-      我的
+      <router-link to="/mine">
+        <i class="fa fa-user-secret"></i>
+        我的
+      </router-link>
     </div>
   </div>
 </template>
@@ -43,9 +56,14 @@ export default {
     background-color: #fff;
 
     .navbar-nav {
-      width: 25%;
+      width: 20%;
       line-height: 45px;
       text-align: center;
+
+      a {
+        color: red;
+        text-decoration: none;
+      }
     }
   }
 </style>
