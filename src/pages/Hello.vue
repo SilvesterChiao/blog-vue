@@ -3,7 +3,8 @@
     <div class="left">
       <div class="concent">
         <!-- <h3>{{ msg }}</h3> -->
-        <transition-group name="article-list" tag="div" class="article-list">
+        <div class="article-list">
+        <!-- <transition-group name="article-list" tag="div" class="article-list"> -->
           <div v-if="articles.length === 0" :key="0">
             暂无文章
           </div>
@@ -12,7 +13,7 @@
               <!-- 头像，用户名等 -->
               <router-link :to="'/people/' + article.user.id">{{article.user.username}}</router-link>
               <span>{{ article.user.constellation }}</span>
-              <span class="close" v-on:click="close(index)"></span>
+              <!-- <span class="close" v-on:click="close(index)"></span> -->
             </div>
             <div class="article-text">
               <!-- 正文内容 -->
@@ -25,7 +26,8 @@
               阅读（{{ article.visitedAmount }}）
             </div>
           </div>
-        </transition-group>
+        <!-- </transition-group> -->
+        </div>
       </div>
     </div>
     <navbar></navbar>
@@ -127,18 +129,5 @@ li {
       // margin-top: 20px;
     }
   }
-}
-
-// vue过渡状态
-.article-list-enter-active, .article-list-leave-active {
-  transition: all 1s;
-}
-.article-list-enter, .article-list-leave-to
-/* .list-leave-active for below version 2.1.8 */ {
-  opacity: 0;
-  // transform: translateY(30px);
-}
-.article-list-leave-active {
-  position: absolute;
 }
 </style>

@@ -6,7 +6,7 @@
     box-sizing: border-box;
     border-radius: 2px;
     background-color: #f3f3f3;
-    transition: all 1s;
+    // transition: all 1s;
 
     .article-header {
       margin-bottom: 12px;
@@ -21,14 +21,14 @@
         }
       }
 
-      span.close {
-        display: none;
-        float: right;
-        width: 8px;
-        height: 8px;
-        background: url(./../assets/images/icon_close.png) center center no-repeat;
-        cursor: pointer;
-      }
+      // span.close {
+      //   display: none;
+      //   float: right;
+      //   width: 8px;
+      //   height: 8px;
+      //   background: url(./../assets/images/icon_close.png) center center no-repeat;
+      //   cursor: pointer;
+      // }
     }
 
     &:hover .article-header span.close {

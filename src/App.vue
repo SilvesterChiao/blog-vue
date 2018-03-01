@@ -4,8 +4,7 @@
       <div class="header-inner">
         <span class="header-title">首页</span>
         <div class="header-tool">
-          工具
-          <i class="fa fa-camera-retro"></i>
+          <i class="fa fa-search"></i>
         </div>
         <!-- <nav>
           <ul>

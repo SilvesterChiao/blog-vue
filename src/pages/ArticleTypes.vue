@@ -1,8 +1,14 @@
 <template>
   <div class="main">
-    {{ msg }}
-    <span>{{ articles.length }}</span>
-    <!-- <el-button v-for="(type, index) in types" :key="index" @click="getArticlesByType(type)">{{ type }}</el-button> -->
+    <div class="article-type-list">
+      <div class="article-type-list-box">
+        <span>全部</span>
+        <span v-for="(type, index) in types" :key="index" @click="getArticlesByType(type)">
+          {{ type }}
+        </span>
+      </div>
+    </div>
+    <!-- <span>{{ articles.length }}</span> -->
       <div class="article-list">
         <div v-if="articles.length === 0" :key="0">
           暂无文章
@@ -81,6 +87,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './../assets/styles/articles.scss'
+@import './../assets/styles/articles.scss';
 
+.main {
+  .article-type-list {
+    width: 100%;
+    height: 40px;
+    overflow: auto;
+
+    .article-type-list-box {
+      display: flex;
+      flex-wrap: nowrap;
+      height: 40px;
+      width: 1000px;
+
+      span {
+        display: inline-block;
+        padding: 0 10px;
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+  }
+}
 </style>

@@ -16,7 +16,6 @@ header {
   box-shadow: 0 1px 3px 0 rgba(0,34,77,.05);
   background-clip: content-box;
   background-color: #fff;
-  color: $color;
 
   .header-inner {
     margin: 0 auto;
@@ -26,11 +25,16 @@ header {
     box-sizing: border-box;
 
     .header-title {
-      color: blue;
+      display: inline-block;
+      height: 56px;
+      line-height: 56px;
+      // color: blue;
     }
 
     .header-tool {
       float: right;
+      height: 56px;
+      line-height: 56px;
     }
 
     nav{

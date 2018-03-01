@@ -35,15 +35,15 @@
     <div class="mine-article-info">
       <ul>
         <li>
-          <i class="fa fa-lock"></i> 私密文章
+          <i class="fa fa-lock fa-fw"></i> 私密文章
           <span>5</span>
         </li>
         <li>
-          <i class="fa fa-bookmark"></i> 收藏的文章
+          <i class="fa fa-bookmark fa-fw"></i> 收藏的文章
           <span>5</span>
         </li>
         <li>
-          <i class="fa fa-heart"></i> 喜欢的文章
+          <i class="fa fa-heart fa-fw"></i> 喜欢的文章
           <span>45</span>
         </li>
       </ul>
@@ -82,5 +82,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .main {
+    .mine-article-info {
+      ul {
+        list-style: none;
 
+        li {
+          padding: 0 10px;
+          height: 40px;
+          line-height: 40px;
+          font-size: 14px;
+          border-bottom: 1px solid #e7e7e7;
+
+          i {
+            font-size: 20px;
+          }
+
+          span {
+            float: right;
+          }
+        }
+      }
+    }
+  }
 </style>
