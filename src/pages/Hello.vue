@@ -1,5 +1,8 @@
 <template>
   <div class="main">
+    <Blogheader>
+      <span class="header-title">首页</span>
+    </Blogheader>
     <div class="left">
       <div class="concent">
         <!-- <h3>{{ msg }}</h3> -->
@@ -38,6 +41,7 @@
 import {config} from '../assets/scripts/config.js';
 import axios from 'axios';
 import TodoList from '../components/TodoList';
+import Blogheader from '../components/Blogheader';
 import Navbar from '../components/Navbar';
 import logo from './../assets/images/logo.png';
 import banner1 from './../assets/images/banner_1.jpg';
@@ -94,6 +98,7 @@ export default {
   },
   components: {
     TodoList,
+    Blogheader,
     Navbar
   }
 }

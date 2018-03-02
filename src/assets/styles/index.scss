@@ -8,80 +8,16 @@ body {
   width: 100%;
 }
 
-header {
-  position: fixed;
-  width: 100%;
-  height: 56px;
-  border-bottom: 1px solid rgba(30,35,42,.06);
-  box-shadow: 0 1px 3px 0 rgba(0,34,77,.05);
-  background-clip: content-box;
-  background-color: #fff;
-
-  .header-inner {
-    margin: 0 auto;
-    padding: 0 16px;
-    width: 100%;
-    height: 56px;
-    box-sizing: border-box;
-
-    .header-title {
-      display: inline-block;
-      height: 56px;
-      line-height: 56px;
-      // color: blue;
-    }
-
-    .header-tool {
-      float: right;
-      height: 56px;
-      line-height: 56px;
-    }
-
-    nav{
-      overflow: hidden;
-
-      ul {
-        overflow: hidden;
-        list-style-type: none;
-
-        li {
-          float: left;
-          height: 56px;
-          line-height: 56px;
-
-          &.entry {
-            float: right;
-          }
-
-          &:first-child a {
-            padding-left: 0;
-          }
-
-          a {
-            padding: 10px;
-            text-decoration: none;
-            color: #8590a6;
-
-            &:hover {
-              color: #175199;
-            }
-
-            &.router-link-active {
-              color: #333;
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
 .main {
   overflow: hidden;
   margin: 0 auto;
-  padding-top: 56px;
   // padding: 16px 20px 0;
   // width: 100%;
+
+  & > div:nth-child(2) {
+    margin-top: 57px;
+  }
 }
 
 footer {

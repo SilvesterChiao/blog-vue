@@ -1,5 +1,8 @@
 <template>
   <div class="main">
+    <Blogheader>
+      <span class="header-title">发现</span>
+    </Blogheader>
     <div class="article-type-list">
       <div class="article-type-list-box">
         <span>全部</span>
@@ -38,6 +41,7 @@
 
 <script>
 import axios from 'axios';
+import Blogheader from '../components/Blogheader';
 import Navbar from '../components/Navbar';
 import {config} from '../assets/scripts/config.js';
 
@@ -81,6 +85,7 @@ export default {
     console.log(this.$router);
   },
   components: {
+    Blogheader,
     Navbar
   }
 }

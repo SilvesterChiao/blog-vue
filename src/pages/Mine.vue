@@ -1,5 +1,8 @@
 <template>
   <div class="main">
+    <BlogHeader>
+      <span class="header-title">我的</span>
+    </BlogHeader>
     <div class="mine-info">
       <div class="mine-info-person" v-if="logined">
         <div class="mine-info-person-header">
@@ -53,6 +56,7 @@
 </template>
 
 <script>
+import BlogHeader from '../components/Blogheader'
 import Navbar from '../components/Navbar'
 
 export default {
@@ -76,6 +80,7 @@ export default {
     this.getUserInfo();
   },
   components: {
+    BlogHeader,
     Navbar
   }
 }
@@ -83,7 +88,9 @@ export default {
 
 <style lang="scss" scoped>
   .main {
+
     .mine-article-info {
+
       ul {
         list-style: none;
 

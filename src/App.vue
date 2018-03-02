@@ -1,45 +1,5 @@
 <template>
   <div class="app">
-    <header>
-      <div class="header-inner">
-        <span class="header-title">首页</span>
-        <div class="header-tool">
-          <i class="fa fa-search"></i>
-        </div>
-        <!-- <nav>
-          <ul>
-            <li>
-              <router-link to="/" exact>首页</router-link>
-            </li>
-            <li>
-              <div class="search-box">
-                <form v-on:submit.prevent="search">
-                  <el-input size="small" v-model="searchString" placeholder="搜索你感兴趣的内容..."></el-input>
-                  <el-button type="primary" size="small">搜索</el-button>
-                </form>
-              </div>
-            </li>
-            <template v-if="message">
-              <li class="entry">
-                <a href="#" @click="logout">退出</a>
-                <router-link to="/logout">退出</router-link>
-              </li>
-              <li class="entry">
-                <router-link to="/addArticle">发布</router-link>
-              </li>
-            </template>
-            <template v-else>
-              <li class="entry">
-                <router-link to="/register">注册</router-link>
-              </li>
-              <li class="entry">
-                <router-link to="/login">登陆</router-link>
-              </li>
-            </template>
-          </ul>
-        </nav> -->
-      </div>
-    </header>
     <!-- <img src="./assets/logo.png"> -->
     <router-view></router-view>
     <footer>
