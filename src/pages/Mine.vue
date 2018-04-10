@@ -1,8 +1,8 @@
 <template>
   <div class="main">
-    <BlogHeader>
+    <Blogheader>
       <span class="header-title">我的</span>
-    </BlogHeader>
+    </Blogheader>
     <div class="mine-info">
       <div class="mine-info-person" v-if="logined">
         <div class="mine-info-person-header">
@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import BlogHeader from '../components/Blogheader'
+import Blogheader from '../components/Blogheader'
 import Navbar from '../components/Navbar'
 
 export default {
@@ -80,7 +80,7 @@ export default {
     this.getUserInfo();
   },
   components: {
-    BlogHeader,
+    Blogheader,
     Navbar
   }
 }

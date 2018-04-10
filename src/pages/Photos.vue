@@ -1,8 +1,8 @@
 <template>
   <div class="main">
-    <BlogHeader>
+    <Blogheader>
       <span class="header-title">消息</span>
-    </BlogHeader>
+    </Blogheader>
     <div class="photo-list">
       <div class="photo" v-for="(pic, index) in pictures" :key="index" v-on:click="showPhoto(index)">
         <img :src="pic" alt="image">
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import BlogHeader from '../components/BlogHeader';
+import Blogheader from '../components/Blogheader';
 import Navbar from '../components/Navbar';
 import picture1 from './../assets/images/picture1.jpg';
 import picture2 from './../assets/images/picture2.jpg';
@@ -73,7 +73,7 @@ export default {
    }
  },
  components: {
-   BlogHeader,
+   Blogheader,
    Navbar
  }
 }
