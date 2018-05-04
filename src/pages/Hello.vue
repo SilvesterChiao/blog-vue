@@ -68,6 +68,9 @@ export default {
     getArticles(){
       var _this = this;
       console.log(config);
+      console.log('vuex store:' + this.$store.state.count);
+      this.$store.commit('increment');
+      console.log('vuex store:' + this.$store.state.count);
       axios.get('http://' + config.host + ':'+ config.port +'/articles/?_expand=user')
         .then(function(response){
           this.articles = response.data;
